@@ -167,7 +167,7 @@ pub trait VecFromTransform: IntoSpatialPoint {
 
 impl VecFromTransform for Vec2 {
     fn from_transform(t: &Transform) -> Self {
-        t.translation.truncate()
+        t.translation.xz()
     }
 }
 impl VecFromTransform for Vec3 {
